@@ -1,5 +1,5 @@
 body {
-    background-color: powderblue;
+    background-color: rgb(255, 236, 249);
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -8,13 +8,12 @@ div {
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.247);
-    padding-top: 25px;
-    padding-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.404);
+    padding-top: 15px;
+    padding-bottom: 15px;
     /* background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
@@ -22,8 +21,8 @@ header {
 }
 
 h1 {
-    color: pink;
-    font-size: 70px;
+    color: #FFBFB7;
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
@@ -31,7 +30,7 @@ h2 {
     padding-bottom: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: #ffbfb779;
     text-decoration: overline;
 }
 
@@ -40,45 +39,79 @@ a {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0px;
-    color: white;
+    color: #FFD447;
     font-size: 20px;
 }
 
 nav {
-    width: 1024px;
-    background-color: rgba(255, 255, 255, 0.247);
+    /* width: 1024px; */
+    background-color: rgba(255, 255, 255, 0.404);
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 25px;
+    border: 10px #FFD447;
 }
 
 main {
     width: 1024px;
-    height: 1170px;
-    background-color: rgba(255, 255, 255, 0.247);
-    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.404);
+    margin-bottom: 25px;
+    padding-bottom: 42px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.left {
-    width: 452px;
+img {
+    height: 252px;
+    margin-top: 42px;
+}
+
+/* .image-1 {
+    padding: 0px;
     float: left;
-    margin-top: 30px;
-    margin-left: 35px;
-    margin-right: 20px;
-}
+    height: 252px;
+    width: auto; 448px
+    margin-left: 42px;
+    margin-right: 32px;
+    margin-top: 42px;
+    position: absolute;
+    left: 45px;
+    top: 45px;
+} */
 
-.right {
-    width: 452px;
-    float: right;
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 35px;
-}
+/* .image-2 {
+    padding: 0px;
+    float: left;
+    height: 252px;
+    width: auto; 448px
+    margin-left: 42px;
+    margin-right: 64px;
+    margin-top: 42px;
+    position: absolute;
+    left: 45px;
+    top: 45px;
+} */
 
 footer {
-    width: 1024px;
-    background-color: rgba(255, 255, 255, 0.247);
+    /* width: 1024px; */
+    background-color: rgba(255, 255, 255, 0.507);
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 25px;
 }
+
+/* .box {
+    height: 150px;
+    width: 200px;
+    background-color: black;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+#ex {
+    background-color: blue;
+} */
