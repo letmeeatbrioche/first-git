@@ -5,19 +5,24 @@ body {
 }
 
 div {
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    width: 1400px;
+    /* display: flex; */
+    /* flex-flow: column; */
+    /* justify-content: space-around; */
+    /* align-items: flex-start; */
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.404);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    /* background-color: rgba(255, 255, 255, 0.404); */
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
     /* background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 h1 {
@@ -36,36 +41,46 @@ h2 {
 
 a {
     text-decoration: none;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0px;
-    color: #FFD447;
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
+    /* margin: 0px; */
+    color: #52B0B4;
     font-size: 20px;
+    /* border-bottom: dotted #52B0B4; */
 }
 
 nav {
-    /* width: 1024px; */
-    background-color: rgba(255, 255, 255, 0.404);
+    background-color: #ffbfb727;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-bottom: 25px;
-    border: 10px #FFD447;
+    /* margin-bottom: 25px; */
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
 }
 
 main {
-    width: 1024px;
     background-color: rgba(255, 255, 255, 0.404);
-    margin-bottom: 25px;
-    padding-bottom: 42px;
+    /* margin-bottom: 25px; */
+    /* padding-bottom: 42px; */
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* height: 100px; */
+    /* width: 100%; */
 }
 
 img {
     height: 252px;
-    margin-top: 42px;
+    width: 448px;
+    /* margin-top: 42px; */
+    object-fit: fill;
+}
+
+.logo {
+    object-fit: cover;
+
 }
 
 /* .image-1 {
@@ -96,10 +111,14 @@ img {
 
 footer {
     /* width: 1024px; */
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: #ffbfb727;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
 }
 
 /* .box {
