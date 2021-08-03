@@ -63,7 +63,7 @@ nav {
 }
 
 main {
-    background-color: rgba(255, 255, 255, 0.404);
+    /* background-color: grey; */
     /* margin-bottom: 25px; */
     /* padding-bottom: 42px; */
     display: flex;
@@ -74,16 +74,23 @@ main {
     /* width: 100%; */
 }
 
-img {
+.img-box {
     height: 252px;
     width: 448px;
+    /* border: solid 4px pink; */
+    margin: 10px 0;
+}
+
+img {
+    height: 252px;
+    /* width: 448px; */
     /* margin-top: 42px; */
-    object-fit: fill;
+    /* object-fit: fill; */
+    /* flex-basis: 100%; */
 }
 
 .logo {
     object-fit: cover;
-
 }
 
 /* .image-1 {
