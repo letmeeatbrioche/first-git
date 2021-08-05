@@ -8,7 +8,7 @@ div {
     margin: 0 auto;
     /* margin-left: auto; */
     /* margin-right: auto; */
-    width: 1400px;
+    max-width: 1400px;
     /* display: flex; */
     /* flex-flow: column; */
     /* justify-content: space-around; */
@@ -75,23 +75,29 @@ main {
 }
 
 .img-box {
-    height: 252px;
-    width: 448px;
-    /* border: solid 4px pink; */
-    margin: 10px 0;
+    /* height: 252px; */
+    /* height: auto; */
+    /* width: 448px; */
+    width: 32%;
+    border: solid 4px pink;
+    margin: 7px 0;
 }
 
 img {
-    height: 252px;
+    /* height: 252px; */
     /* width: 448px; */
+    height: auto;
+    max-width: 100%;
     /* margin-top: 42px; */
-    /* object-fit: fill; */
+    /* object-fit: contain; */
     /* flex-basis: 100%; */
+    /* max-width: 100%; */
+    /* margin: 0; */
 }
 
-.logo {
-    object-fit: cover;
-}
+/* .logo { */
+    /* object-fit: fill; */
+/* } */
 
 /* .image-1 {
     padding: 0px;
