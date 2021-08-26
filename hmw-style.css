@@ -4,11 +4,17 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+*>* {
+    box-sizing: border-box; 
+}
+
+
 div {
     margin: 0 auto;
     /* margin-left: auto; */
     /* margin-right: auto; */
-    max-width: 1400px;
+    max-width: 1900px; /* 1800px max width before img-boxes start to get gaps */
+    /* width: 1500px; */
     /* display: flex; */
     /* flex-flow: column; */
     /* justify-content: space-around; */
@@ -43,20 +49,30 @@ a {
     text-decoration: none;
     /* padding-left: 15px; */
     /* padding-right: 15px; */
-    /* margin: 0px; */
+    margin: 0;
     color: #52B0B4;
     font-size: 20px;
     /* border-bottom: dotted #52B0B4; */
-    border: dotted 4px pink;
+    outline: dotted 4px pink;
+    /* Benji recommends outline and not border */
+    /* outline: dotted 4px pink; */
     padding: 10px;
     background-color: #ffbfb727;
+}
+
+a:focus, a:hover {
+    background-color: white;
+}
+
+a:active {
+    background-color: rgb(253, 208, 222);
 }
 
 nav {
     /* background-color: #ffbfb727; */
     padding-top: 15px;
     padding-bottom: 15px;
-    /* margin-bottom: 25px; */
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -64,12 +80,14 @@ nav {
 
 main {
     /* background-color: grey; */
-    /* margin-bottom: 25px; */
+    margin-bottom: 20px;
     /* padding-bottom: 42px; */
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    align-items: flex-start;
     /* height: 100px; */
     /* width: 100%; */
 }
@@ -79,25 +97,47 @@ main {
     /* height: auto; */
     /* width: 448px; */
     width: 32%;
-    border: solid 4px pink;
+    /* border: solid 4px pink; */
+    outline: solid 4px pink;
     margin: 7px 0;
+    /* object-fit: fill; */
+    /* display: inline-block; */
+}
+
+@media (max-width: 500px) {
+    .img-box { width: 100%; }
+    img { display: block; }
 }
 
 img {
     /* height: 252px; */
     /* width: 448px; */
+    /* display: block; */
     height: auto;
-    max-width: 100%;
+    /* max-width: 100%; */
+    /* outline: solid 4px pink; */
     /* margin-top: 42px; */
     /* object-fit: contain; */
     /* flex-basis: 100%; */
     /* max-width: 100%; */
     /* margin: 0; */
+    width: calc((100% / 3) - 10px);
+    margin: 0 15px 15px 0;
 }
 
-/* .logo { */
-    /* object-fit: fill; */
-/* } */
+.img-box:nth-child(3n) {
+    margin-right: unset;
+}
+
+.img-box img {
+    /* get rid of the whitespace between the image bottom and the border */
+    display: block;
+}
+
+.logo {
+    margin: 0 auto;
+    outline: none;
+}
 
 /* .image-1 {
     padding: 0px;
@@ -150,3 +190,59 @@ footer {
 #ex {
     background-color: blue;
 } */
+
+.blogpost {
+    background-color: rgba(255, 255, 255, 0.281);
+    color: rgb(61, 11, 40);
+    outline: solid 4px pink; 
+    /* width: 70%; */
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+h2 {
+    color: #FFBFB7;
+    margin-bottom: 0;
+}
+
+.blogimg {
+    position: relative;
+    left: 26%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Universal principle: borders should be inside of our measurements! https://css-tricks.com/box-sizing/ It's so important, it's a holiday haha */
+*>* { box-sizing: border-box; }
+
+main {
+    /* this will make our blocks pop in like bricks, from left to right and top to bottom. then we don't have to worry about them leaving funny spaces */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.img-box {
+    /* set a percent-based width, but leave space for pixel-based margins */
+    /* math: 3 boxes out of the whole thing. take away 10px each (leaves 3 * 10 = 30px) */
+    width: calc((100% / 3) - 10px);
+    /* now margins on the sides and the bottom can match exactly */
+    /* math: 3 cards would only make 2 gutters. 30px / 2 = 15px */
+    margin: 0 15px 15px 0;
+    /* PS: I didn't use margin-right and margin-bottom because I'm overriding styles from above */
+}
+/* the problem is, we don't want this on the last item in the row */
+/* nth-child can help us to target things like that */
+.img-box:nth-child(3n) { margin-right: unset; }
+/* WARNING! If we weren't using justify-content: flex-start, we'd need to worry about keeping the last images all the way left. */
+
+.img-box img {
+    /* get rid of the whitespace between the image bottom and the border */
+    display: block;
+}
