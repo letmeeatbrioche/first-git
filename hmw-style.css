@@ -96,12 +96,14 @@ main {
     /* height: 252px; */
     /* height: auto; */
     /* width: 448px; */
-    width: 32%;
+    /* width: 32%; */
     /* border: solid 4px pink; */
     outline: solid 4px pink;
-    margin: 7px 0;
+    /* margin: 7px 0; */
     /* object-fit: fill; */
     /* display: inline-block; */
+    width: calc((100% / 3) - 10px);
+    margin: 0 15px 15px 0;
 }
 
 @media (max-width: 500px) {
@@ -113,16 +115,14 @@ img {
     /* height: 252px; */
     /* width: 448px; */
     /* display: block; */
-    height: auto;
+    /* height: auto; */
     /* max-width: 100%; */
     /* outline: solid 4px pink; */
     /* margin-top: 42px; */
-    /* object-fit: contain; */
+    object-fit: cover;
     /* flex-basis: 100%; */
     /* max-width: 100%; */
     /* margin: 0; */
-    width: calc((100% / 3) - 10px);
-    margin: 0 15px 15px 0;
 }
 
 .img-box:nth-child(3n) {
